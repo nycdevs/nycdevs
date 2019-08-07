@@ -12,81 +12,101 @@
   <!-- Bulma Version 0.7.5-->
   <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
   <style>
-    .hero-body {
-      padding: 1rem;
+    .section {
+      padding: .5rem;
     }
+
     .image {
-      width: 50%; 
-      margin-left: 25%; 
+      width: 50%;
+      margin-left: 25%;
       margin-bottom: 1rem;
+    }
+
+    .tabs ul {
+      border: none;
     }
   </style>
 </head>
 
 <body>
-  <section class="hero is-fullheight is-default is-bold">
-    <div class="hero-head">
-      <nav class="navbar">
-        <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="../">
-              <h3>NYC Devs</h3>
-            </a>
-            <span class="navbar-burger burger" data-target="navbarMenu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <div id="navbarMenu" class="navbar-menu">
-            <div class="navbar-end">
-              <div class="tabs is-right">
-                <ul>
-                  <li class="is-active"><a>Home</a></li>
-                  <li><a href="http://www.twitter.com/nycdevs">Twitter</a></li>
-                  <li><a href="http://www.github.com/nycdevs">Github</a></li>
-                  <li><a href="mailto:nycdevs@gmail.com">Email</a></li>
-                </ul>
-              </div>
+  <section class="section">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="../">
+            <h3>NYC Devs</h3>
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="tabs is-right">
+              <ul>
+                <li class="is-active"><a>Home</a></li>
+                <li><a href="http://www.twitter.com/nycdevs">Twitter</a></li>
+                <li><a href="http://www.github.com/nycdevs">Github</a></li>
+                <li><a href="mailto:nycdevs@gmail.com">Email</a></li>
+              </ul>
             </div>
           </div>
         </div>
-      </nav>
-    </div>
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <div class="columns is-vcentered">
-          <div class="column is-4 is-offset-4">
-            <figure class="image">
-              <img src="images/nycdevs.png" alt="NYC Devs logo" />
-            </figure>
-            <h1 class="title is-2">
-              Welcome To NYC Devs
-            </h1>
-            <h2 class="subtitle is-4">
-              We are ~2000 developers talking code, finding jobs and making
-              moves in NYC.
-            </h2>
-            <br />
-            <p class="has-text-centered">
-              <a href="https://join.slack.com/t/nycdevs/shared_invite/enQtNzA5MDEwNzExODI4LTBjOTFkMWI1MjUxNjQ0NWY1MjdkZjE1YzY2N2IzMmNiODhkZTM2NDVmOWNjMDQwN2M0NDc0YTU0OWUzNzI3MDg"
-                class="button is-medium is-info is-outlined">
-                Join Us On Slack
-              </a>
-            </p>
-          </div>
+      </div>
+    </nav>
+  </section>
+  <section class="section">
+    <div class="container has-text-centered">
+      <div class="columns is-vcentered">
+        <div class="column is-4 is-offset-4">
+          <figure class="image">
+            <img src="images/nycdevs.png" alt="NYC Devs logo" />
+          </figure>
+          <h1 class="title is-2">
+            Welcome To NYC Devs
+          </h1>
+          <h2 class="subtitle is-4">
+            We are ~2000 developers talking code, finding jobs and making
+            moves in NYC.
+          </h2>
+          <br />
+        </div>
+      </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="column is-6 is-offset-3">
+        <div class="box">
+          <form method="POST" data-netlify="true">
+            <div class="field">
+              <div class="control">
+                <input class="input is-large" type="email" required="true" placeholder="Your Email" autofocus="">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input is-large" type="text" required="true" placeholder="How'd you find us?">
+              </div>
+            </div>
+            <div class="field">
+              <label class="checkbox">
+                <input type="checkbox" required="true">
+                I agree to the follow the <a href="/code-of-conduct.html" target="_blank">Code of Conduct</a>
+              </label>
+            </div>
+            <button action="/success.html" class="button is-block is-info is-large is-fullwidth">Join On Slack</button>
+          </form>
         </div>
       </div>
     </div>
-
-    <div class="hero-foot">
-      <div class="container">
-        <div class="tabs is-centered">
-          <ul>
-            <li><a>&copy NYC Devs</a></li>
-          </ul>
-        </div>
-      </div>
+  </section>
+  <section class="section">
+    <div class="tabs is-centered">
+      <ul>
+        <li><a href="/code-of-conduct.html">Code of Conduct</a></li>
+      </ul>
     </div>
   </section>
   <script src="js/bulma.js"></script>
@@ -98,7 +118,6 @@
       dataLayer.push(arguments);
     }
     gtag("js", new Date());
-
     gtag("config", "UA-145056948-1");
   </script>
 </body>
